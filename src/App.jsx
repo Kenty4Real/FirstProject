@@ -1,7 +1,8 @@
-function App() {
-  return (
-    <div>
-      <header>
+import { CORE_CONCEPTS } from './data.js';
+
+function Header() {
+  return(
+    <header>
         <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
         <h1>React Essentials</h1>
         <p>
@@ -9,8 +10,27 @@ function App() {
           going to build!
         </p>
       </header>
+  )
+}
+
+function App() {
+  return (
+    <div>
+      <Header />
       <main>
-        <h2>Time to get started!</h2>
+        <section id="core-concepts">
+          <h2>Time to get started!</h2>
+          <ul>
+            <CoreConsept
+              title={CORE_CONCEPTS[0].title}
+              image={CORE_CONCEPTS[0].image}
+              description={CORE_CONCEPTS[0].description}  
+            />
+            <CoreConsept/>
+            <CoreConsept/>
+          </ul>
+        </section>
+        
       </main>
     </div>
   );
