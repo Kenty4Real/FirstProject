@@ -1,6 +1,6 @@
 import {useState} from 'react';
-import { EXAMPLES } from './data.js';
-import { CORE_CONCEPTS } from './data1.js';
+import { EXAMPLES } from './examples.js';
+import { CORE_CONCEPTS } from './coreconsepts.js';
 import Header from './components/Header.jsx';
 import CoreConsepts from './Components/CoreConsept.jsx';
 import TabButton from './components/TabButtons.jsx';
@@ -12,7 +12,6 @@ function App() {
 
     function handleSelect(selectedButton){
       setSelectedTopic(selectedButton);
-        console.log(selectedTopic);
     }
 
   return (
